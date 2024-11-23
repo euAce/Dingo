@@ -3,7 +3,7 @@ import { BuyTokensForm } from '@/features/buy-tokens';
 import { SellTokensForm } from '@/features/sell-tokens';
 import { Header } from '@/widgets/header';
 
-export const BuyPage: React.FC = () => {
+export const CounterPage: React.FC = () => {
   return (
     <>
       <Header />

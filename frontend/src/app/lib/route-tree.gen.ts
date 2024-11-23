@@ -16,17 +16,17 @@ import { Route as rootRoute } from './../routes/__root'
 
 // Create Virtual Routes
 
-const BuyLazyImport = createFileRoute('/buy')()
+const CounterLazyImport = createFileRoute('/counter')()
 const AboutLazyImport = createFileRoute('/about')()
 const IndexLazyImport = createFileRoute('/')()
 
 // Create/Update Routes
 
-const BuyLazyRoute = BuyLazyImport.update({
-  id: '/buy',
-  path: '/buy',
+const CounterLazyRoute = CounterLazyImport.update({
+  id: '/counter',
+  path: '/counter',
   getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./../routes/buy.lazy').then((d) => d.Route))
+} as any).lazy(() => import('./../routes/counter.lazy').then((d) => d.Route))
 
 const AboutLazyRoute = AboutLazyImport.update({
   id: '/about',
@@ -58,11 +58,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutLazyImport
       parentRoute: typeof rootRoute
     }
-    '/buy': {
-      id: '/buy'
-      path: '/buy'
-      fullPath: '/buy'
-      preLoaderRoute: typeof BuyLazyImport
+    '/counter': {
+      id: '/counter'
+      path: '/counter'
+      fullPath: '/counter'
+      preLoaderRoute: typeof CounterLazyImport
       parentRoute: typeof rootRoute
     }
   }
@@ -73,41 +73,41 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
-  '/buy': typeof BuyLazyRoute
+  '/counter': typeof CounterLazyRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
-  '/buy': typeof BuyLazyRoute
+  '/counter': typeof CounterLazyRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexLazyRoute
   '/about': typeof AboutLazyRoute
-  '/buy': typeof BuyLazyRoute
+  '/counter': typeof CounterLazyRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/buy'
+  fullPaths: '/' | '/about' | '/counter'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/buy'
-  id: '__root__' | '/' | '/about' | '/buy'
+  to: '/' | '/about' | '/counter'
+  id: '__root__' | '/' | '/about' | '/counter'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexLazyRoute: typeof IndexLazyRoute
   AboutLazyRoute: typeof AboutLazyRoute
-  BuyLazyRoute: typeof BuyLazyRoute
+  CounterLazyRoute: typeof CounterLazyRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexLazyRoute: IndexLazyRoute,
   AboutLazyRoute: AboutLazyRoute,
-  BuyLazyRoute: BuyLazyRoute,
+  CounterLazyRoute: CounterLazyRoute,
 }
 
 export const routeTree = rootRoute
@@ -122,7 +122,7 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/about",
-        "/buy"
+        "/counter"
       ]
     },
     "/": {
@@ -131,8 +131,8 @@ export const routeTree = rootRoute
     "/about": {
       "filePath": "about.lazy.tsx"
     },
-    "/buy": {
-      "filePath": "buy.lazy.tsx"
+    "/counter": {
+      "filePath": "counter.lazy.tsx"
     }
   }
 }

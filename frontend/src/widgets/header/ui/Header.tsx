@@ -10,8 +10,8 @@ export const Header: React.FC = () => {
           <Link to="/" className="[&.active]:font-bold">
             Home
           </Link>{' '}
-          <Link to="/buy" className="[&.active]:font-bold">
-            Buy
+          <Link to="/counter" className="[&.active]:font-bold">
+            Counter
           </Link>
           <Link to="/about" className="[&.active]:font-bold">
             About
