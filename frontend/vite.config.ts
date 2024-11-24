@@ -15,15 +15,21 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src/'),
+      'use-sync-external-store/shim': path.resolve(__dirname, './node_modules/use-sync-external-store'),
     },
     extensions: ['.ts', '.tsx', '.json'],
   },
   optimizeDeps: {
     exclude: ['xtend', 'ms'],
+    include: ['use-sync-external-store'],
   },
   build: {
     commonjsOptions: {
       ignore: ['ms'],
+      transformMixedEsModules: true,
     },
+  },
+  server: {
+    host: '127.0.0.1',
   },
 });
