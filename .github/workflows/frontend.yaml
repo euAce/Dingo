@@ -4,19 +4,19 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'frontend/**'
+      - "frontend/**"
     branches:
       - master
       - dev
     tags:
-      - 'v?[0-9]+.[0-9]+.[0-9]+'
+      - "v?[0-9]+.[0-9]+.[0-9]+"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 20.x ]
+        node-version: [22.x]
 
     steps:
       - uses: actions/checkout@v3
@@ -25,10 +25,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: cd frontend && npm install
+        run: cd frontend && pnpm install
       - name: build production project
-        run: cd frontend && npm run build
+        run: cd frontend && pnpm run build
         if: always()
       - name: linting typescript
-        run: cd frontend && npm run lint
+        run: cd frontend && pnpm run lint
         if: always()
