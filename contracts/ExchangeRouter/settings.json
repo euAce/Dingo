@@ -1,0 +1,53 @@
+{
+	"optimizer": {
+		"enabled": true,
+		"runs": 10,
+		"details": {
+			"constantOptimizer": true
+		}
+	},
+	"outputSelection": {
+		"*": {
+			"*": [
+				"evm.bytecode",
+				"evm.deployedBytecode",
+				"devdoc",
+				"userdoc",
+				"metadata",
+				"abi"
+			]
+		}
+	},
+	"metadata": {
+		"useLiteralContent": true
+	},
+	"libraries": {
+		"contracts/callback/CallbackUtils.sol": {
+			"CallbackUtils": "0x41418793aa2b2d595b37398ec6af99ec6b40f48e"
+		},
+		"contracts/deposit/DepositStoreUtils.sol": {
+			"DepositStoreUtils": "0xad3a89131048b85acf899f089f2fd17424cb77b2"
+		},
+		"contracts/fee/FeeUtils.sol": {
+			"FeeUtils": "0xf7f06d4e6ab73058b25707c0c2c288c4f70b9da6"
+		},
+		"contracts/market/MarketEventUtils.sol": {
+			"MarketEventUtils": "0x5d4520ab45b635b1b9e83b4890e7b87bc0a45b04"
+		},
+		"contracts/market/MarketStoreUtils.sol": {
+			"MarketStoreUtils": "0x7f9d94e918985bee91a712c4ae26dc46f24c6583"
+		},
+		"contracts/order/OrderStoreUtils.sol": {
+			"OrderStoreUtils": "0x3c2233b0caa8437827f03366556186f5e5899fa8"
+		},
+		"contracts/referral/ReferralUtils.sol": {
+			"ReferralUtils": "0x4904c431effc77faa547789f0895ca9f93940e74"
+		},
+		"contracts/shift/ShiftStoreUtils.sol": {
+			"ShiftStoreUtils": "0xab27c2a82d89b545a53a4f13f9dd42b70d4655df"
+		},
+		"contracts/withdrawal/WithdrawalStoreUtils.sol": {
+			"WithdrawalStoreUtils": "0x41194c86fc1a915d568d79067a9bccc7d47d499a"
+		}
+	}
+}
