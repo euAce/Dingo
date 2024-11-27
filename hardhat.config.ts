@@ -45,7 +45,7 @@ const config: HardhatUserConfig = {
     hardhat: {
       allowUnlimitedContractSize: true,
       chainId: 31337,
-      initialBaseFeePerGas: 0,
+      initialBaseFeePerGas: 1,
       gas: 12000000,
       blockGasLimit: 12000000
     }, 
@@ -57,6 +57,7 @@ const config: HardhatUserConfig = {
         "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
         "0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a"
       ],
+      initialBaseFeePerGas: 1,
       chainId: 31337,
       gas: 12000000,
       blockGasLimit: 12000000,

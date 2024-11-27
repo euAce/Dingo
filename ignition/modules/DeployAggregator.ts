@@ -48,7 +48,7 @@ const AggregatorDeployModule = buildModule("AccessControlledAggregatorDeployment
   const linkToken = m.contract("StandardArbERC20");
 
   // Деплоим основной контракт
-  const aggregator = m.contract(
+  const sequencerUptimeFeed = m.contract(
     "AccessControlledOffchainAggregator",
     [
       params.maximumGasPrice,
@@ -70,14 +70,14 @@ const AggregatorDeployModule = buildModule("AccessControlledAggregatorDeployment
   const addAggregatorAccess = m.call(
     billingAccessController,
     "addAccess",
-    [aggregator]
+    [sequencerUptimeFeed]
   );
 
   return {
     requesterAccessController,
     billingAccessController,
     linkToken,
-    aggregator
+    sequencerUptimeFeed
   };
 });
 
