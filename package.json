@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_NO_WARNINGS=1 hardhat test",
+    "run": "NODE_NO_WARNINGS=1 hardhat run",
+    "compile": "hardhat compile",
+    "deploy": "hardhat deploy",
+    "deploy:testnet": "hardhat deploy --network testnet",
+    "clean": "npx hardhat clean && rm -rf cache artifacts typechain-types ignition/deployments"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +20,10 @@
     "@openzeppelin/contracts": "^5.1.0",
     "@openzeppelin/contracts-upgradeable": "^5.1.0",
     "@openzeppelin/hardhat-upgrades": "^3.6.0",
-    "hardhat": "^2.22.16"
+    "hardhat": "^2.22.16",
+    "hardhat-deploy": "^0.14.0"
+  },
+  "dependencies": {
+    "eth-create2-calculator": "^1.1.5"
   }
 }

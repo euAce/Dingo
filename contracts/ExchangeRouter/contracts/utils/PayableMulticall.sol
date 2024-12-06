@@ -3,6 +3,7 @@
 pragma solidity ^0.8.0;
 
 import "../error/ErrorUtils.sol";
+import "hardhat/console.sol";
 
 /**
  * @title PayableMulticall
@@ -16,6 +17,7 @@ abstract contract PayableMulticall {
      * @dev Receives and executes a batch of function calls on this contract.
      */
     function multicall(bytes[] calldata data) external payable virtual returns (bytes[] memory results) {
+        console.logBytes(data[0]);
         results = new bytes[](data.length);
 
         for (uint256 i; i < data.length; i++) {

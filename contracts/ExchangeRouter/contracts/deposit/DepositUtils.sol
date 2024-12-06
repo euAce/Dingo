@@ -67,10 +67,16 @@ library DepositUtils {
         CreateDepositParams memory params
     ) external returns (bytes32) {
         AccountUtils.validateAccount(account);
+        console.log("createDepositDepUtils===============>(1)", account); 
 
         Market.Props memory market = MarketUtils.getEnabledMarket(dataStore, params.market);
+        console.log("createDepositDepUtils===============>(1.1)", account); 
+
         MarketUtils.validateSwapPath(dataStore, params.longTokenSwapPath);
+        console.log("createDepositDepUtils===============>(1.2)", account); 
+
         MarketUtils.validateSwapPath(dataStore, params.shortTokenSwapPath);
+        console.log("createDepositDepUtils===============>(1.3)", account); 
 
         // if the initialLongToken and initialShortToken are the same, only the initialLongTokenAmount would
         // be non-zero, the initialShortTokenAmount would be zero
@@ -95,8 +101,10 @@ library DepositUtils {
         if (initialLongTokenAmount == 0 && initialShortTokenAmount == 0) {
             revert Errors.EmptyDepositAmounts();
         }
+        console.log("createDepositDepUtils===============>(3)", account); 
 
         AccountUtils.validateReceiver(params.receiver);
+        console.log("createDepositDepUtils===============>(4)", account); 
 
         Deposit.Props memory deposit = Deposit.Props(
             Deposit.Addresses(
@@ -122,6 +130,7 @@ library DepositUtils {
                 params.shouldUnwrapNativeToken
             )
         );
+        console.log("createDepositDepUtils===============>(5)", account); 
 
         CallbackUtils.validateCallbackGasLimit(dataStore, deposit.callbackGasLimit());
 
@@ -130,12 +139,14 @@ library DepositUtils {
             deposit.longTokenSwapPath().length + deposit.shortTokenSwapPath().length
         );
         GasUtils.validateExecutionFee(dataStore, estimatedGasLimit, params.executionFee, oraclePriceCount);
+        console.log("createDepositDepUtils===============>(6)", account); 
 
         bytes32 key = NonceUtils.getNextKey(dataStore);
 
         DepositStoreUtils.set(dataStore, key, deposit);
 
         DepositEventUtils.emitDepositCreated(eventEmitter, key, deposit, Deposit.DepositType.Normal);
+        console.log("createDepositDepUtils===============>(7)", account); 
 
         return key;
     }

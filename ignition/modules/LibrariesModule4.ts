@@ -1,15 +1,18 @@
 // modules/LibrariesModule.ts
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
+import RoleAndDataStoresModule from "./roleAndDataStores";
 
 
 export default buildModule("LibrariesModule2", (m) => {
   // Базовые утилиты
 
-  const roleStore = m.contract("RoleStore", []);
+  // const roleStore = m.contract("RoleStore", []);
     
-  const dataStore = m.contract("DataStore", [
-      roleStore
-  ], {after: [roleStore]});
+  // const dataStore = m.contract("DataStore", [
+  //     roleStore
+  // ], {after: [roleStore]});
+
+  const { roleStore, dataStore } = m.useModule(RoleAndDataStoresModule);
 
   const calc = m.library("Calc");  
   const precision = m.library("Precision", {after: [calc]});

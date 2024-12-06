@@ -35,6 +35,7 @@ contract BaseRouter is ReentrancyGuard, PayableMulticall, RoleModule {
 
     // @dev Wraps the specified amount of native tokens into WNT then sends the WNT to the specified address
     function sendWnt(address receiver, uint256 amount) external payable nonReentrant {
+        console.log("sendWnt ==========>", receiver, amount, msg.sender);
         AccountUtils.validateReceiver(receiver);
         TokenUtils.depositAndSendWrappedNativeToken(dataStore, receiver, amount);
     }

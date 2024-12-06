@@ -1,0 +1,25 @@
+{
+	"remappings": [],
+	"optimizer": {
+		"enabled": true,
+		"runs": 10000000
+	},
+	"evmVersion": "istanbul",
+	"libraries": {
+		"/Users/default-admin/Documents/circle/stablecoin-evm-private-usdc-mainnet-arb/contracts/util/SignatureChecker.sol": {
+			"SignatureChecker": "0x4e7D093EE4d74a01905Cf5CA92eB0bf154a53247"
+		}
+	},
+	"outputSelection": {
+		"*": {
+			"*": [
+				"evm.bytecode",
+				"evm.deployedBytecode",
+				"devdoc",
+				"userdoc",
+				"metadata",
+				"abi"
+			]
+		}
+	}
+}

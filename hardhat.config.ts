@@ -4,6 +4,7 @@ import "@nomicfoundation/hardhat-ignition";
 import "@nomicfoundation/hardhat-ethers";
 import "@nomicfoundation/hardhat-verify";
 import '@openzeppelin/hardhat-upgrades';
+import "hardhat-deploy";
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -35,7 +36,8 @@ const config: HardhatUserConfig = {
     artifacts: "./artifacts"
   },
   mocha: {
-    timeout: 100000
+    timeout: 100000,
+    reporter: 'min'
   },
   typechain: {
     outDir: "typechain",

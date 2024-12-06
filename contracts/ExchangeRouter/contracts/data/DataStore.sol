@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 import "../role/RoleModule.sol";
 import "../utils/Calc.sol";
-
+import "hardhat/console.sol";
 // @title DataStore
 // @dev DataStore for all general state values
 contract DataStore is RoleModule {
@@ -198,6 +198,8 @@ contract DataStore is RoleModule {
     // @param value the value to set
     // @return the address value for the key
     function setAddress(bytes32 key, address value) external onlyController returns (address) {
+        console.logBytes32(key); 
+        console.log("setAddress ==========>", value, msg.sender); 
         addressValues[key] = value;
         return value;
     }

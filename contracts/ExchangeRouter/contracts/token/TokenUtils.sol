@@ -13,6 +13,8 @@ import "../utils/AccountUtils.sol";
 
 import "./IWNT.sol";
 
+import "hardhat/console.sol";
+
 /**
  * @title TokenUtils
  * @dev Library for token functions, helps with transferring of tokens and
@@ -31,6 +33,7 @@ library TokenUtils {
      * @return The address of the WNT token.
      */
     function wnt(DataStore dataStore) internal view returns (address) {
+        console.log("wnt ==========>", dataStore.getAddress(Keys.WNT), msg.sender);
         return dataStore.getAddress(Keys.WNT);
     }
 
@@ -53,7 +56,7 @@ library TokenUtils {
     ) internal {
         if (amount == 0) { return; }
         AccountUtils.validateReceiver(receiver);
-
+        console.log("transfer ==========>", receiver, msg.sender, token);
         uint256 gasLimit = dataStore.getUint(Keys.tokenTransferGasLimit(token));
         if (gasLimit == 0) {
             revert Errors.EmptyTokenTranferGasLimit(token);
@@ -146,10 +149,14 @@ library TokenUtils {
         uint256 amount
     ) internal {
         if (amount == 0) { return; }
-        AccountUtils.validateReceiver(receiver);
-
+        AccountUtils.validateReceiver(receiver); 
+        console.log("depositAndSendWrappedNativeToken ==========>", receiver, amount, msg.sender);
         address _wnt = wnt(dataStore);
+        console.log("depositAndSendWrappedNativeToken ==========>", _wnt);
         IWNT(_wnt).deposit{value: amount}();
+        console.log("depositAndSendWrappedNativeToken ==========>", amount, receiver, msg.sender);
+        console.log("depositAndSendWrappedNativeToken ==========>", _wnt);
+
 
         transfer(
             dataStore,
@@ -231,7 +238,8 @@ library TokenUtils {
     ) internal returns (bool, bytes memory) {
         bytes memory data = abi.encodeWithSelector(token.transfer.selector, to, amount);
         (bool success, bytes memory returndata) = address(token).call{ gas: gasLimit }(data);
-
+        console.logBytes(returndata);   
+        console.log("nonRevertingTransferWithGasLimit ==========>", success, msg.sender, to); 
         if (success) {
             if (returndata.length == 0) {
                 // only check isContract if the call was successful and the return data is empty
