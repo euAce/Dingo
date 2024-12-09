@@ -133,6 +133,7 @@ const ethUsdMarketAddress = getMarketTokenAddress(
 
 const ethUsdMarket = await reader.getMarket(dataStore, ethUsdMarketAddress);
 console.log("ethUsdMarket", ethUsdMarket)
+
 // const ethUsdSpotOnlyMarket = await marketFactory.createMarket(
 //     ethers.ZeroAddress,
 //     await weth1.getAddress(),
@@ -206,11 +207,11 @@ const routerApprove = await usdc1.approve(
     }
 );
 const receiptRouterApprove = await routerApprove.wait()
-console.log("receiptRouterApprove=============================>", receiptRouterApprove)
+// console.log("receiptRouterApprove=============================>", receiptRouterApprove)
 
 const routerApprove2 = await usdc1.approve(wallet1WithProvider.address, ethers.parseUnits("80000000", 6));
 const receiptRouterApprove2 = await routerApprove2.wait()
-console.log("receiptRouterApprove2=============================>", receiptRouterApprove2)
+// console.log("receiptRouterApprove2=============================>", receiptRouterApprove2)
 
 // const sendTokens = await exchangeRouter.sendTokens(
 //     await usdc1.getAddress(),
@@ -292,12 +293,17 @@ console.log("ethUsdSpotOnlyMarket.marketToken =============>",
 
     const result = await tx.wait();
 
-    console.log("result", result)   
+    console.log("result is geted")   
 
-    const depositKeys = await getDepositKeys(dataStore, 0, 1);
-    const deposit = await reader.getDeposit(dataStore.address, depositKeys[0]);
-   
+    const depositKeys = await getDepositKeys(dataStore, 0, 6);
+    console.log("depositKeys is geted", depositKeys)   
+    console.log("depositKeys[0] is geted", depositKeys[5])
 
+    const deposit = await reader.getDeposit(
+      dataStore, 
+      depositKeys[5]
+    );
+    console.log("deposit is geted", deposit)
 
     await logGasUsage({
       tx,

@@ -20,10 +20,12 @@
     "@openzeppelin/contracts": "^5.1.0",
     "@openzeppelin/contracts-upgradeable": "^5.1.0",
     "@openzeppelin/hardhat-upgrades": "^3.6.0",
+    "@types/lodash": "^4.17.13",
     "hardhat": "^2.22.16",
     "hardhat-deploy": "^0.14.0"
   },
   "dependencies": {
+    "decimal.js": "^10.4.3",
     "eth-create2-calculator": "^1.1.5"
   }
 }

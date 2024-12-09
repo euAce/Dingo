@@ -594,5 +594,5 @@ const {
 
 export default AddResearchModule;
 
-//! npx hardhat ignition deploy ignition/modules/addResearch.ts --network localhost
+//! npx hardhat ignition deploy ignition/modules/addResearch.ts --network localhost > outputDeploy.log 2>&1
     

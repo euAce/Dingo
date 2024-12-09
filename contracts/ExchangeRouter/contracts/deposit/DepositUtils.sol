@@ -143,6 +143,8 @@ library DepositUtils {
 
         bytes32 key = NonceUtils.getNextKey(dataStore);
 
+        console.logBytes32(key); 
+
         DepositStoreUtils.set(dataStore, key, deposit);
 
         DepositEventUtils.emitDepositCreated(eventEmitter, key, deposit, Deposit.DepositType.Normal);

@@ -1,4 +1,4 @@
-Wallet 1: 9988.698895140140905352 ETH
+Wallet 1: 9922.691873597105834777 ETH
 [Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"components":[{"internalType":"address","name":"marketToken","type":"address"},{"internalType":"address","name":"indexToken","type":"address"},{"internalType":"address","name":"longToken","type":"address"},{"internalType":"address","name":"shortToken","type":"address"}],"internalType":"struct Market.Props","name":"market","type":"tuple"},{"components":[{"components":[{"internalType":"uint256","name":"min","type":"uint256"},{"internalType":"uint256","name":"max","type":"uint256"}],"internalType":"struct Price.Props","name":"indexTokenPrice","type":"tuple"},{"components":[{"internalType":"uint256","name":"min","type":"uint256"},{"internalType":"uint256","name":"max","type":"uint256"}],"internalType":"struct Price.Props","name":"longTokenPrice","type":"tuple"},{"components":[{"internalType":"uint256","name":"min","type":"uint256"},{"internalType":"uint256","name":"max","type":"uint256"}],"internalType":"struct Price.Props","name":"shortTokenPrice","type":"tuple"}],"internalType":"struct MarketUtils.MarketPrices","name":"prices","type":"tuple"},{"internalType":"uint256","name":"longTokenAmount","type":"uint256"},{"internalType":"uint256","name":"shortTokenAmount","type":"uint256"},{"internalType":"address","name":"uiFeeReceiver","type":"address"},{"internalType":"enum ISwapPricingUtils.SwapPricingType","name":"swapPricingType","type":"ISwapPricingUtils.SwapPricingType"},{"internalType":"bool","name":"includeVirtualInventoryImpact","type":"bool"}],"name":"getDepositAmountOut","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
 [Warning] Invalid Fragment {"inputs":[{"components":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"components":[{"internalType":"address","name":"marketToken","type":"address"},{"internalType":"address","name":"indexToken","type":"address"},{"internalType":"address","name":"longToken","type":"address"},{"internalType":"address","name":"shortToken","type":"address"}],"internalType":"struct Market.Props","name":"market","type":"tuple"},{"components":[{"components":[{"internalType":"uint256","name":"min","type":"uint256"},{"internalType":"uint256","name":"max","type":"uint256"}],"internalType":"struct Price.Props","name":"indexTokenPrice","type":"tuple"},{"components":[{"internalType":"uint256","name":"min","type":"uint256"},{"internalType":"uint256","name":"max","type":"uint256"}],"internalType":"struct Price.Props","name":"longTokenPrice","type":"tuple"},{"components":[{"internalType":"uint256","name":"min","type":"uint256"},{"internalType":"uint256","name":"max","type":"uint256"}],"internalType":"struct Price.Props","name":"shortTokenPrice","type":"tuple"}],"internalType":"struct MarketUtils.MarketPrices","name":"prices","type":"tuple"},{"internalType":"address","name":"tokenIn","type":"address"},{"components":[{"internalType":"uint256","name":"min","type":"uint256"},{"internalType":"uint256","name":"max","type":"uint256"}],"internalType":"struct Price.Props","name":"tokenInPrice","type":"tuple"},{"internalType":"address","name":"tokenOut","type":"address"},{"components":[{"internalType":"uint256","name":"min","type":"uint256"},{"internalType":"uint256","name":"max","type":"uint256"}],"internalType":"struct Price.Props","name":"tokenOutPrice","type":"tuple"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"int256","name":"priceImpactUsd","type":"int256"},{"internalType":"address","name":"uiFeeReceiver","type":"address"},{"internalType":"enum ISwapPricingUtils.SwapPricingType","name":"swapPricingType","type":"ISwapPricingUtils.SwapPricingType"}],"internalType":"struct ReaderDepositUtils.GetDepositAmountOutForSingleTokenParams","name":"params","type":"tuple"}],"name":"getDepositAmountOutForSingleToken","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
 [Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"components":[{"internalType":"address","name":"marketToken","type":"address"},{"internalType":"address","name":"indexToken","type":"address"},{"internalType":"address","name":"longToken","type":"address"},{"internalType":"address","name":"shortToken","type":"address"}],"internalType":"struct Market.Props","name":"market","type":"tuple"},{"components":[{"internalType":"uint256","name":"min","type":"uint256"},{"internalType":"uint256","name":"max","type":"uint256"}],"internalType":"struct Price.Props","name":"indexTokenPrice","type":"tuple"},{"internalType":"uint256","name":"positionSizeInUsd","type":"uint256"},{"internalType":"uint256","name":"positionSizeInTokens","type":"uint256"},{"internalType":"int256","name":"sizeDeltaUsd","type":"int256"},{"internalType":"bool","name":"isLong","type":"bool"}],"name":"getExecutionPrice","outputs":[{"components":[{"internalType":"int256","name":"priceImpactUsd","type":"int256"},{"internalType":"uint256","name":"priceImpactDiffUsd","type":"uint256"},{"internalType":"uint256","name":"executionPrice","type":"uint256"}],"internalType":"struct ReaderPricingUtils.ExecutionPriceResult","name":"","type":"tuple"}],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
@@ -23,11 +23,11 @@ Wallet 1: 9988.698895140140905352 ETH
 [Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"internalType":"address","name":"glv","type":"address"}],"name":"validateGlv","outputs":[],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
 [Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"internalType":"address","name":"glv","type":"address"},{"internalType":"address","name":"market","type":"address"},{"internalType":"bool","name":"shouldBeEnabled","type":"bool"}],"name":"validateGlvMarket","outputs":[],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
 [Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"internalType":"address","name":"glv","type":"address"},{"components":[{"internalType":"address","name":"marketToken","type":"address"},{"internalType":"address","name":"indexToken","type":"address"},{"internalType":"address","name":"longToken","type":"address"},{"internalType":"address","name":"shortToken","type":"address"}],"internalType":"struct Market.Props","name":"market","type":"tuple"},{"internalType":"uint256","name":"marketPoolValue","type":"uint256"},{"internalType":"uint256","name":"marketTokenSupply","type":"uint256"}],"name":"validateGlvMarketTokenBalance","outputs":[],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
+[Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"internalType":"bytes32","name":"key","type":"bytes32"}],"name":"get","outputs":[{"components":[{"components":[{"internalType":"address","name":"glv","type":"address"},{"internalType":"address","name":"account","type":"address"},{"internalType":"address","name":"receiver","type":"address"},{"internalType":"address","name":"callbackContract","type":"address"},{"internalType":"address","name":"uiFeeReceiver","type":"address"},{"internalType":"address","name":"market","type":"address"},{"internalType":"address","name":"initialLongToken","type":"address"},{"internalType":"address","name":"initialShortToken","type":"address"},{"internalType":"address[]","name":"longTokenSwapPath","type":"address[]"},{"internalType":"address[]","name":"shortTokenSwapPath","type":"address[]"}],"internalType":"struct GlvDeposit.Addresses","name":"addresses","type":"tuple"},{"components":[{"internalType":"uint256","name":"marketTokenAmount","type":"uint256"},{"internalType":"uint256","name":"initialLongTokenAmount","type":"uint256"},{"internalType":"uint256","name":"initialShortTokenAmount","type":"uint256"},{"internalType":"uint256","name":"minGlvTokens","type":"uint256"},{"internalType":"uint256","name":"updatedAtTime","type":"uint256"},{"internalType":"uint256","name":"executionFee","type":"uint256"},{"internalType":"uint256","name":"callbackGasLimit","type":"uint256"}],"internalType":"struct GlvDeposit.Numbers","name":"numbers","type":"tuple"},{"components":[{"internalType":"bool","name":"shouldUnwrapNativeToken","type":"bool"},{"internalType":"bool","name":"isMarketTokenDeposit","type":"bool"}],"internalType":"struct GlvDeposit.Flags","name":"flags","type":"tuple"}],"internalType":"struct GlvDeposit.Props","name":"","type":"tuple"}],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
+[Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"internalType":"bytes32","name":"key","type":"bytes32"}],"name":"get","outputs":[{"components":[{"components":[{"internalType":"address","name":"glv","type":"address"},{"internalType":"address","name":"market","type":"address"},{"internalType":"address","name":"account","type":"address"},{"internalType":"address","name":"receiver","type":"address"},{"internalType":"address","name":"callbackContract","type":"address"},{"internalType":"address","name":"uiFeeReceiver","type":"address"},{"internalType":"address[]","name":"longTokenSwapPath","type":"address[]"},{"internalType":"address[]","name":"shortTokenSwapPath","type":"address[]"}],"internalType":"struct GlvWithdrawal.Addresses","name":"addresses","type":"tuple"},{"components":[{"internalType":"uint256","name":"glvTokenAmount","type":"uint256"},{"internalType":"uint256","name":"minLongTokenAmount","type":"uint256"},{"internalType":"uint256","name":"minShortTokenAmount","type":"uint256"},{"internalType":"uint256","name":"updatedAtTime","type":"uint256"},{"internalType":"uint256","name":"executionFee","type":"uint256"},{"internalType":"uint256","name":"callbackGasLimit","type":"uint256"}],"internalType":"struct GlvWithdrawal.Numbers","name":"numbers","type":"tuple"},{"components":[{"internalType":"bool","name":"shouldUnwrapNativeToken","type":"bool"}],"internalType":"struct GlvWithdrawal.Flags","name":"flags","type":"tuple"}],"internalType":"struct GlvWithdrawal.Props","name":"","type":"tuple"}],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
 [Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"internalType":"bytes32","name":"key","type":"bytes32"}],"name":"get","outputs":[{"components":[{"components":[{"internalType":"address","name":"glv","type":"address"},{"internalType":"address","name":"fromMarket","type":"address"},{"internalType":"address","name":"toMarket","type":"address"}],"internalType":"struct GlvShift.Addresses","name":"addresses","type":"tuple"},{"components":[{"internalType":"uint256","name":"marketTokenAmount","type":"uint256"},{"internalType":"uint256","name":"minMarketTokens","type":"uint256"},{"internalType":"uint256","name":"updatedAtTime","type":"uint256"}],"internalType":"struct GlvShift.Numbers","name":"numbers","type":"tuple"}],"internalType":"struct GlvShift.Props","name":"","type":"tuple"}],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
 [Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"internalType":"address","name":"key","type":"address"}],"name":"get","outputs":[{"components":[{"internalType":"address","name":"glvToken","type":"address"},{"internalType":"address","name":"longToken","type":"address"},{"internalType":"address","name":"shortToken","type":"address"}],"internalType":"struct Glv.Props","name":"","type":"tuple"}],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
 [Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"internalType":"bytes32","name":"salt","type":"bytes32"}],"name":"getBySalt","outputs":[{"components":[{"internalType":"address","name":"glvToken","type":"address"},{"internalType":"address","name":"longToken","type":"address"},{"internalType":"address","name":"shortToken","type":"address"}],"internalType":"struct Glv.Props","name":"","type":"tuple"}],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
-[Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"internalType":"bytes32","name":"key","type":"bytes32"}],"name":"get","outputs":[{"components":[{"components":[{"internalType":"address","name":"glv","type":"address"},{"internalType":"address","name":"account","type":"address"},{"internalType":"address","name":"receiver","type":"address"},{"internalType":"address","name":"callbackContract","type":"address"},{"internalType":"address","name":"uiFeeReceiver","type":"address"},{"internalType":"address","name":"market","type":"address"},{"internalType":"address","name":"initialLongToken","type":"address"},{"internalType":"address","name":"initialShortToken","type":"address"},{"internalType":"address[]","name":"longTokenSwapPath","type":"address[]"},{"internalType":"address[]","name":"shortTokenSwapPath","type":"address[]"}],"internalType":"struct GlvDeposit.Addresses","name":"addresses","type":"tuple"},{"components":[{"internalType":"uint256","name":"marketTokenAmount","type":"uint256"},{"internalType":"uint256","name":"initialLongTokenAmount","type":"uint256"},{"internalType":"uint256","name":"initialShortTokenAmount","type":"uint256"},{"internalType":"uint256","name":"minGlvTokens","type":"uint256"},{"internalType":"uint256","name":"updatedAtTime","type":"uint256"},{"internalType":"uint256","name":"executionFee","type":"uint256"},{"internalType":"uint256","name":"callbackGasLimit","type":"uint256"}],"internalType":"struct GlvDeposit.Numbers","name":"numbers","type":"tuple"},{"components":[{"internalType":"bool","name":"shouldUnwrapNativeToken","type":"bool"},{"internalType":"bool","name":"isMarketTokenDeposit","type":"bool"}],"internalType":"struct GlvDeposit.Flags","name":"flags","type":"tuple"}],"internalType":"struct GlvDeposit.Props","name":"","type":"tuple"}],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
-[Warning] Invalid Fragment {"inputs":[{"internalType":"contract DataStore","name":"dataStore","type":"DataStore"},{"internalType":"bytes32","name":"key","type":"bytes32"}],"name":"get","outputs":[{"components":[{"components":[{"internalType":"address","name":"glv","type":"address"},{"internalType":"address","name":"market","type":"address"},{"internalType":"address","name":"account","type":"address"},{"internalType":"address","name":"receiver","type":"address"},{"internalType":"address","name":"callbackContract","type":"address"},{"internalType":"address","name":"uiFeeReceiver","type":"address"},{"internalType":"address[]","name":"longTokenSwapPath","type":"address[]"},{"internalType":"address[]","name":"shortTokenSwapPath","type":"address[]"}],"internalType":"struct GlvWithdrawal.Addresses","name":"addresses","type":"tuple"},{"components":[{"internalType":"uint256","name":"glvTokenAmount","type":"uint256"},{"internalType":"uint256","name":"minLongTokenAmount","type":"uint256"},{"internalType":"uint256","name":"minShortTokenAmount","type":"uint256"},{"internalType":"uint256","name":"updatedAtTime","type":"uint256"},{"internalType":"uint256","name":"executionFee","type":"uint256"},{"internalType":"uint256","name":"callbackGasLimit","type":"uint256"}],"internalType":"struct GlvWithdrawal.Numbers","name":"numbers","type":"tuple"},{"components":[{"internalType":"bool","name":"shouldUnwrapNativeToken","type":"bool"}],"internalType":"struct GlvWithdrawal.Flags","name":"flags","type":"tuple"}],"internalType":"struct GlvWithdrawal.Props","name":"","type":"tuple"}],"stateMutability":"view","type":"function"}: invalid type (argument="type", value="DataStore", code=INVALID_ARGUMENT, version=6.13.4)
 ethUsdMarket Result(4) [
   '0x464911E28928F3488C61913d211aA19E4549AeeA',
   '0x6C7B96639F72912a60A94BBcC80644B0dF8e6C1E',
@@ -40,114 +40,47 @@ ethUsdSpotOnlyMarket Result(4) [
   '0x6C7B96639F72912a60A94BBcC80644B0dF8e6C1E',
   '0x5FbDB2315678afecb367f032d93F642f64180aa3'
 ]
-1733511070360
+1733525347147
 dataStore.getUint(Keys.MAX_SWAP_PATH_LENGTH) =============> 10000000n
-receiptRouterApprove=============================> ContractTransactionReceipt {
-  provider: HardhatEthersProvider {
-    _hardhatProvider: LazyInitializationProviderAdapter {
-      _providerFactory: [AsyncFunction (anonymous)],
-      _emitter: [EventEmitter],
-      _initializingPromise: [Promise],
-      provider: [BackwardsCompatibilityProviderAdapter]
-    },
-    _networkName: 'localhost',
-    _blockListeners: [],
-    _transactionHashListeners: Map(0) {},
-    _eventListeners: []
-  },
-  to: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
-  from: '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
-  contractAddress: null,
-  hash: '0xc41154dd0c75a85d2321ae271e0c25f8352a55561d83fff96ca4a2608c49eadd',
-  index: 0,
-  blockHash: '0xf077cd79b655ce2a767759396f0881e0d535e5e184383c876c9290c2da72432b',
-  blockNumber: 234,
-  logsBloom: '0x00000000000000000002000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000080000000000000000000000000000000000000000000840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000020000000000000000000000000000000000000000000000000000000000000000000040000000100000000000000000000000000000000000000000000000000010000000000000000000000000000001000000000000000000000000000000',
-  gasUsed: 46080n,
-  blobGasUsed: undefined,
-  cumulativeGasUsed: 46080n,
-  gasPrice: 1000000005n,
-  blobGasPrice: undefined,
-  type: 2,
-  status: 1,
-  root: undefined
-}
-receiptRouterApprove2=============================> ContractTransactionReceipt {
-  provider: HardhatEthersProvider {
-    _hardhatProvider: LazyInitializationProviderAdapter {
-      _providerFactory: [AsyncFunction (anonymous)],
-      _emitter: [EventEmitter],
-      _initializingPromise: [Promise],
-      provider: [BackwardsCompatibilityProviderAdapter]
-    },
-    _networkName: 'localhost',
-    _blockListeners: [],
-    _transactionHashListeners: Map(0) {},
-    _eventListeners: []
-  },
-  to: '0x5FbDB2315678afecb367f032d93F642f64180aa3',
-  from: '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
-  contractAddress: null,
-  hash: '0x696ac203e95eb2d9e7074050574642ad7c9676e3622ff15f14c80b2e0cac6a1c',
-  index: 0,
-  blockHash: '0xe61f4edac10b23ecfe708dc0af44760199397a696dc9f7d0e6cbaa6761fca0c3',
-  blockNumber: 235,
-  logsBloom: '0x00000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000020000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000010000000000000000000000000000001000000000000000000000000000000',
-  gasUsed: 41280n,
-  blobGasUsed: undefined,
-  cumulativeGasUsed: 41280n,
-  gasPrice: 1000000005n,
-  blobGasPrice: undefined,
-  type: 2,
-  status: 1,
-  root: undefined
-}
 roleStore.CONTROLLER =============> 0x97adf037b2472f4a6a9825eff7d2dd45e37f2dc308df2a260d6a72af4189a65b
 createDeposit.ethUsdMarket =============> 0x464911E28928F3488C61913d211aA19E4549AeeA 0x6C7B96639F72912a60A94BBcC80644B0dF8e6C1E 0x5FbDB2315678afecb367f032d93F642f64180aa3 0xF17c7Fc7F4E70B466658cdD244fE34A498c7320E 0x4bd5869a01440a9ac6d7bf7aa7004f402b52b845f20e2cec925101e13d84d075
 ethUsdSpotOnlyMarket.marketToken =============> 0xF17c7Fc7F4E70B466658cdD244fE34A498c7320E
-result ContractTransactionReceipt {
-  provider: HardhatEthersProvider {
-    _hardhatProvider: LazyInitializationProviderAdapter {
-      _providerFactory: [AsyncFunction (anonymous)],
-      _emitter: [EventEmitter],
-      _initializingPromise: [Promise],
-      provider: [BackwardsCompatibilityProviderAdapter]
-    },
-    _networkName: 'localhost',
-    _blockListeners: [],
-    _transactionHashListeners: Map(0) {},
-    _eventListeners: []
-  },
-  to: '0x581f62c0901d4dce2553cb6140dBb4CeE533d834',
-  from: '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
-  contractAddress: null,
-  hash: '0xe1fa48774feff26e3377698af137ddcf9ac7a4827a473cdf97f8472131e57c5f',
-  index: 0,
-  blockHash: '0x249cc1fa90ebc2259c37f3aa7d92c8bb79215dcc2f00fdabe0b661d67f209b16',
-  blockNumber: 236,
-  logsBloom: '0x00000000000000000002000000000000000000000000004000000000001000000000000000000000000000000000001004000000000000000000000008000000000000000000000000000008000020000200000000000000000000000008000000080840020000000000000000000800000008000000000000000010000000000000000000000000000000000000001000000000000008000000000200000041400000000200000000000000000000000000000000000000000000008008000000000042001000000000000000000000000000000000000000000000000020040000000000000000000000000000000001000000000000400000000000000000',
-  gasUsed: 1302855n,
-  blobGasUsed: undefined,
-  cumulativeGasUsed: 1302855n,
-  gasPrice: 1000000005n,
-  blobGasPrice: undefined,
-  type: 2,
-  status: 1,
-  root: undefined
-}
-TypeError: unsupported addressable value (argument="target", value=null, code=INVALID_ARGUMENT, version=6.13.4)
-    at makeError (C:\Users\Arwielao\Solidity\team4Update\DingoWithTokens\node_modules\ethers\src.ts\utils\errors.ts:687:21)
-    at assert (C:\Users\Arwielao\Solidity\team4Update\DingoWithTokens\node_modules\ethers\src.ts\utils\errors.ts:715:25)
-    at assertArgument (C:\Users\Arwielao\Solidity\team4Update\DingoWithTokens\node_modules\ethers\src.ts\utils\errors.ts:727:5)
-    at resolveAddress (C:\Users\Arwielao\Solidity\team4Update\DingoWithTokens\node_modules\ethers\src.ts\address\checks.ts:122:19)
-    at C:\Users\Arwielao\Solidity\team4Update\DingoWithTokens\node_modules\ethers\src.ts\contract\contract.ts:172:60
-    at ParamType.#walkAsync (C:\Users\Arwielao\Solidity\team4Update\DingoWithTokens\node_modules\ethers\src.ts\abi\fragments.ts:779:24)
-    at ParamType.walkAsync (C:\Users\Arwielao\Solidity\team4Update\DingoWithTokens\node_modules\ethers\src.ts\abi\fragments.ts:797:24)
-    at C:\Users\Arwielao\Solidity\team4Update\DingoWithTokens\node_modules\ethers\src.ts\contract\contract.ts:170:22
-    at Array.map (<anonymous>)
-    at resolveArgs (C:\Users\Arwielao\Solidity\team4Update\DingoWithTokens\node_modules\ethers\src.ts\contract\contract.ts:169:37) {
-  code: 'INVALID_ARGUMENT',
-  argument: 'target',
-  value: undefined,
-  shortMessage: 'unsupported addressable value'
-}
+result is geted
+depositKeys is geted Result(6) [
+  '0x8f5027cba0afa352b59bbab8c140f1156d9327252bf86f050c72a39b0ca0f345',
+  '0xdf00a6a1d19abf64219d2b2ebcbc15907d09f4f0f549a46b28b273599329e23e',
+  '0x4cbb204f415fe7c26f2bdab68effdeac17ca981584c44d3137f49d385a0958e1',
+  '0x1cde52822a11f5c6e705c8c7dc68e0c39e075de8f9cd9e486781e7fcaab27b46',
+  '0x5d3a514db4a018e9ed299007c47b63a097e3cb4e9cce274f01d2245915918288',
+  '0xba70f1fc43a861583f435603fc6fe9a1c2bc90e210ec224e0cdd1505335bd1b5'
+]
+depositKeys[0] is geted 0xba70f1fc43a861583f435603fc6fe9a1c2bc90e210ec224e0cdd1505335bd1b5
+deposit is geted Result(3) [
+  Result(9) [
+    '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
+    '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
+    '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
+    '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
+    '0x464911E28928F3488C61913d211aA19E4549AeeA',
+    '0x6C7B96639F72912a60A94BBcC80644B0dF8e6C1E',
+    '0x5FbDB2315678afecb367f032d93F642f64180aa3',
+    Result(2) [
+      '0x464911E28928F3488C61913d211aA19E4549AeeA',
+      '0xF17c7Fc7F4E70B466658cdD244fE34A498c7320E'
+    ],
+    Result(2) [
+      '0xF17c7Fc7F4E70B466658cdD244fE34A498c7320E',
+      '0x464911E28928F3488C61913d211aA19E4549AeeA'
+    ]
+  ],
+  Result(6) [
+    10000000000000000000n,
+    44000000000n,
+    100n,
+    1733525086n,
+    1000000000000000000n,
+    200000n
+  ],
+  Result(1) [ true ]
+]
+exchangeRouter.createDeposit 1303364
