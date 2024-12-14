@@ -1,4 +1,15 @@
-import { hashString, hashData } from "./hash";
+import { AbiCoder, keccak256, getBytes } from "ethers";
+
+export function hashData(dataTypes: string[], dataValues: any[]) {
+  const abiCoder = new AbiCoder();
+  const bytes = abiCoder.encode(dataTypes, dataValues);
+  const hash = keccak256(getBytes(bytes));
+  return hash;
+}
+
+export function hashString(string: string) {
+  return hashData(["string"], [string]);
+}
 
 export const WNT = hashString("WNT");
 export const NONCE = hashString("NONCE");
@@ -256,71 +267,71 @@ export const WITHDRAWABLE_BUYBACK_TOKEN_AMOUNT = hashString("WITHDRAWABLE_BUYBAC
 
 export const VALID_FROM_TIME = hashString("VALID_FROM_TIME");
 
-export function accountDepositListKey(account) {
+export function accountDepositListKey(account: string) {
   return hashData(["bytes32", "address"], [ACCOUNT_DEPOSIT_LIST, account]);
 }
 
-export function accountWithdrawalListKey(account) {
+export function accountWithdrawalListKey(account: string) {
   return hashData(["bytes32", "address"], [ACCOUNT_WITHDRAWAL_LIST, account]);
 }
 
-export function accountShiftListKey(account) {
+export function accountShiftListKey(account: string) {
   return hashData(["bytes32", "address"], [ACCOUNT_SHIFT_LIST, account]);
 }
 
-export function accountPositionListKey(account) {
+export function accountPositionListKey(account: string) {
   return hashData(["bytes32", "address"], [ACCOUNT_POSITION_LIST, account]);
 }
 
-export function accountOrderListKey(account) {
+export function accountOrderListKey(account: string ) {
   return hashData(["bytes32", "address"], [ACCOUNT_ORDER_LIST, account]);
 }
 
-export function subaccountListKey(account) {
+export function subaccountListKey(account: string ) {
   return hashData(["bytes32", "address"], [SUBACCOUNT_LIST, account]);
 }
 
-export function autoCancelOrderListKey(positionKey) {
+export function autoCancelOrderListKey(positionKey: string  ) {
   return hashData(["bytes32", "bytes32"], [AUTO_CANCEL_ORDER_LIST, positionKey]);
 }
 
-export function isMarketDisabledKey(market) {
+export function isMarketDisabledKey(market: string) {
   return hashData(["bytes32", "address"], [IS_MARKET_DISABLED, market]);
 }
 
-export function minMarketTokensForFirstDeposit(market) {
+export function minMarketTokensForFirstDeposit(market: string) {
   return hashData(["bytes32", "address"], [MIN_MARKET_TOKENS_FOR_FIRST_DEPOSIT, market]);
 }
 
-export function createDepositFeatureDisabledKey(contract) {
+export function createDepositFeatureDisabledKey(contract: string) {
   return hashData(["bytes32", "address"], [CREATE_DEPOSIT_FEATURE_DISABLED, contract]);
 }
 
-export function cancelDepositFeatureDisabledKey(contract) {
+export function cancelDepositFeatureDisabledKey(contract: string) {
   return hashData(["bytes32", "address"], [CANCEL_DEPOSIT_FEATURE_DISABLED, contract]);
 }
 
-export function executeDepositFeatureDisabledKey(contract) {
+export function executeDepositFeatureDisabledKey(contract: string) {
   return hashData(["bytes32", "address"], [EXECUTE_DEPOSIT_FEATURE_DISABLED, contract]);
 }
 
-export function createOrderFeatureDisabledKey(contract, orderType) {
+export function createOrderFeatureDisabledKey(contract: string, orderType: number) {
   return hashData(["bytes32", "address", "uint256"], [CREATE_ORDER_FEATURE_DISABLED, contract, orderType]);
 }
 
-export function executeOrderFeatureDisabledKey(contract, orderType) {
+export function executeOrderFeatureDisabledKey(contract: string, orderType: bigint) {
   return hashData(["bytes32", "address", "uint256"], [EXECUTE_ORDER_FEATURE_DISABLED, contract, orderType]);
 }
 
-export function executeAdlFeatureDisabledKey(contract, orderType) {
+export function executeAdlFeatureDisabledKey(contract: string, orderType: number) {
   return hashData(["bytes32", "address", "uint256"], [EXECUTE_ADL_FEATURE_DISABLED, contract, orderType]);
 }
 
-export function updateOrderFeatureDisabledKey(contract, orderType) {
+export function updateOrderFeatureDisabledKey(contract: string, orderType: number) {
   return hashData(["bytes32", "address", "uint256"], [UPDATE_ORDER_FEATURE_DISABLED, contract, orderType]);
 }
 
-export function cancelOrderFeatureDisabledKey(contract, orderType) {
+export function cancelOrderFeatureDisabledKey(contract: string, orderType: number) {
   return hashData(["bytes32", "address", "uint256"], [CANCEL_ORDER_FEATURE_DISABLED, contract, orderType]);
 }
 
@@ -713,11 +724,11 @@ export function minGlvTokensForFirstGlvDepositKey(glv: string) {
   return hashData(["bytes32", "address"], [MIN_GLV_TOKENS_FOR_FIRST_DEPOSIT, glv]);
 }
 
-export function accountGlvDepositListKey(account) {
+export function accountGlvDepositListKey(account: string) {
   return hashData(["bytes32", "address"], [ACCOUNT_GLV_DEPOSIT_LIST, account]);
 }
 
-export function accountGlvWithdrawalListKey(account) {
+export function accountGlvWithdrawalListKey(account: string) {
   return hashData(["bytes32", "address"], [ACCOUNT_GLV_WITHDRAWAL_LIST, account]);
 }
 

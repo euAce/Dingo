@@ -224,10 +224,15 @@ contract Config is ReentrancyGuard, RoleModule, BasicMulticall {
     // @param data the additional data to be combined with the base key
     // @param value the bool value
     function setBool(bytes32 baseKey, bytes memory data, bool value) external onlyKeeper nonReentrant {
+        console.log("setBool",  value);
+        console.logBytes32(baseKey);
+        console.logBytes(data); 
+
         _validateKey(baseKey);
+        console.log("after _validateKey");
 
         bytes32 fullKey = Keys.getFullKey(baseKey, data);
-
+        console.logBytes32(fullKey);
         dataStore.setBool(fullKey, value);
 
         EventUtils.EventLogData memory eventData;
@@ -253,9 +258,14 @@ contract Config is ReentrancyGuard, RoleModule, BasicMulticall {
     // @param data the additional data to be combined with the base key
     // @param value the address value
     function setAddress(bytes32 baseKey, bytes memory data, address value) external onlyKeeper nonReentrant {
+        console.log("setAddress",  value);
+        console.logBytes32(baseKey);
+        console.logBytes(data); 
+
         _validateKey(baseKey);
 
         bytes32 fullKey = Keys.getFullKey(baseKey, data);
+        console.logBytes32(fullKey);
 
         dataStore.setAddress(fullKey, value);
 
@@ -282,10 +292,15 @@ contract Config is ReentrancyGuard, RoleModule, BasicMulticall {
     // @param data the additional data to be combined with the base key
     // @param value the bytes32 value
     function setBytes32(bytes32 baseKey, bytes memory data, bytes32 value) external onlyKeeper nonReentrant {
+        console.logBytes32(value);
+        console.logBytes32(baseKey);
+        console.logBytes(data); 
+
         _validateKey(baseKey);
+        console.log("after _validateKey");
 
         bytes32 fullKey = Keys.getFullKey(baseKey, data);
-
+        console.logBytes32(fullKey);
         dataStore.setBytes32(fullKey, value);
 
         EventUtils.EventLogData memory eventData;
@@ -309,10 +324,15 @@ contract Config is ReentrancyGuard, RoleModule, BasicMulticall {
     // @param data the additional data to be combined with the base key
     // @param value the uint256 value
     function setUint(bytes32 baseKey, bytes memory data, uint256 value) external onlyKeeper nonReentrant {
+        console.log("setUint",  value);
+        console.logBytes32(baseKey);
+        console.logBytes(data); 
+
         _validateKey(baseKey);
+        console.log("after _validateKey");
 
         bytes32 fullKey = Keys.getFullKey(baseKey, data);
-
+        console.logBytes32(fullKey);
         _validateRange(baseKey, data, value);
 
         dataStore.setUint(fullKey, value);
@@ -340,10 +360,15 @@ contract Config is ReentrancyGuard, RoleModule, BasicMulticall {
     // @param data the additional data to be combined with the base key
     // @param value the int256 value
     function setInt(bytes32 baseKey, bytes memory data, int256 value) external onlyKeeper nonReentrant {
+        console.logInt(value);
+        console.logBytes32(baseKey);
+        console.logBytes(data); 
+
         _validateKey(baseKey);
+        console.log("after _validateKey");
 
         bytes32 fullKey = Keys.getFullKey(baseKey, data);
-
+        console.logBytes32(fullKey);
         dataStore.setInt(fullKey, value);
 
         EventUtils.EventLogData memory eventData;

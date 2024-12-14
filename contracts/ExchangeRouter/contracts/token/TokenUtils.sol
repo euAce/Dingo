@@ -58,7 +58,9 @@ library TokenUtils {
         AccountUtils.validateReceiver(receiver);
         console.log("transfer ==========>", receiver, msg.sender, token);
         uint256 gasLimit = dataStore.getUint(Keys.tokenTransferGasLimit(token));
-        if (gasLimit == 0) {
+        console.log("tokenTransferGasLimit ==========>");
+        console.logBytes32(Keys.tokenTransferGasLimit(token));
+        if (gasLimit == 0) { 
             revert Errors.EmptyTokenTranferGasLimit(token);
         }
 

@@ -317,7 +317,7 @@ catch((e) => {
     process.exit(1)
 })
 
-//! npx hardhat run scripts/gmxFunctions1.ts --network localhost > output.log 2>&1
+//! npx hardhat run scripts/gmxFunctions3.ts --network localhost > output.log 2>&1
 // "test": "echo \"Error: no test specified\" && exit 1",
 // 
 // 0x70997970c51812dc3a010c7d01b50e0d17dc79c89798999897989998

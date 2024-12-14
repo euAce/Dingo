@@ -1,3 +1,4 @@
 {
-    "terminal.integrated.cwd": "C:\\Users\\Arwielao\\Solidity\\team4Update\\DingoWithTokens"
+    "terminal.integrated.cwd": "C:\\Users\\Arwielao\\Solidity\\team4Update\\DingoWithTokens",
+    "editor.suggest.showStatusBar": false
 }

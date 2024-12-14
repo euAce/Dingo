@@ -52,7 +52,12 @@ contract MarketFactory is RoleModule {
             marketType
         ));
 
+        console.log("salt ==========>");
+        console.logBytes32(salt);
+
         address existingMarketAddress = dataStore.getAddress(MarketStoreUtils.getMarketSaltHash(salt));
+        console.log("existingMarketAddress ==========>");
+        console.logAddress(existingMarketAddress);
         if (existingMarketAddress != address(0)) {
             revert Errors.MarketAlreadyExists(salt, existingMarketAddress);
         }
